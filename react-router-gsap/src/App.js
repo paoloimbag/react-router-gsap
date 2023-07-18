@@ -6,6 +6,7 @@ import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/Contact";
 import Error404 from "./components/pages/Error404";
 
+
 export default function App() {
 	return (
 		<div>

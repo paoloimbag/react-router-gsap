@@ -1,4 +1,5 @@
 import {Outlet, Link } from "react-router-dom";
+import logo from './../assets/images/logo.png';
 
 export default function Layout() {
 	return (
@@ -7,20 +8,21 @@ export default function Layout() {
 			share across all the pages on your site, like navigation. */}
 		<header>
 		<nav className="navbar">
-		  <ul className="nav-links">
-			<li>
-			  <Link to="/">Home</Link>
-			</li>
-			<li>
-			  <Link to="/about">About</Link>
-			</li>
-			<li>
-			  <Link to="/projects">Projects</Link>
-			</li>
-			<li>
-			  <Link to="/contact">Contact</Link>
-			</li>
-		  </ul>
+			<img src={logo} alt="Paolo Imbag Logo"/>
+			<ul className="nav-links">
+				<li>
+					<Link to="/">Home</Link>
+				</li>
+				<li>
+					<Link to="/about">About</Link>
+				</li>
+				<li>
+					<Link to="/projects">Projects</Link>
+				</li>
+				<li>
+					<Link to="/contact">Contact</Link>
+				</li>
+			</ul>
 		</nav>
 
 		</header>
@@ -29,6 +31,32 @@ export default function Layout() {
 			so you can think about this <Outlet> as a placeholder for
 			the child routes we defined above. */}
 		<Outlet />
+
+
+		<hr/>
+
+		<footer>
+			<nav className="navbar">
+				<img src={logo} alt="Paolo Imbag Logo"/>
+				<p>©2023 • Paolo Imbag | INM420 SBB</p>
+				<p>Interactive Media Design • Seneca College</p>
+				<ul className="nav-links">
+					<li>
+						<Link to="/">Home</Link>
+					</li>
+					<li>
+						<Link to="/about">About</Link>
+					</li>
+					<li>
+						<Link to="/projects">Projects</Link>
+					</li>
+					<li>
+						<Link to="/contact">Contact</Link>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+
 	  </div>
 	);
   }

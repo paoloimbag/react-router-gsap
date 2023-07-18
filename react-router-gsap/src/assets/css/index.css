@@ -16,13 +16,11 @@ code {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
+	font-family: 'Inter', sans-serif;
 }
 
 header {
-	background-color: #f2f2f2;
+	background-color: #ffffff;
 	position: sticky;
 	top: 0;
 	z-index: 999;
@@ -32,7 +30,10 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px;
+	padding: 30px 0;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 .logo {
@@ -48,7 +49,7 @@ header {
 }
 
 .nav-links li {
-	margin-right: 20px;
+	margin-right: 50px;
 }
 
 .nav-links li:last-child {
@@ -64,4 +65,189 @@ header {
 
 .nav-links a:hover {
 	color: #007bff;
+}
+
+.active-link {
+	font-weight: bold;
+	color: red;
+  }
+
+
+
+/* Desktop */
+
+@media (min-width: 768px) {
+
+	/* Layout */
+	hr
+	{
+		width: 100%;
+		max-width: 1440px;
+		margin: 120px auto 0;
+	}
+
+	footer
+	{
+		width: 100%;
+		max-width: 1440px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	/* Home Page */
+
+	.container
+	{
+		max-width: 1440px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.header
+	{
+		margin: 5rem auto;
+		display: flex;
+		flex-direction: row;
+		justify-content:left;
+		gap: 5rem;
+	}
+
+	.sticky
+	{
+		position: sticky;
+		top: 150px; /* Adjust this value to set the distance from the top when the div becomes sticky */
+	}
+
+	.heroCopy
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.heroCopy p
+	{
+		margin-bottom: 60px;
+	}
+	.heroCopy h1, .headingH1
+	{
+		color: #000;
+		font-family: Inter;
+		font-size: 112px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 120px; /* 107.143% */
+	}
+
+	.heroCopy p
+	{
+		color: #000;
+		font-family: Inter;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 36px;
+		margin-top: -30px;
+	}
+
+	.contactH1
+	{
+		color: #000;
+		font-family: Inter;
+		font-size: 96px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 104px; /* 107.143% */
+	}
+
+	.buttonLink
+	{
+		padding: 24px 0;
+		background-color: #F96D64;
+		color: #FFF;
+		text-align: center;
+		font-family: Inter;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 36px;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+	}
+
+	.buttonLink-hug
+	{
+		margin: 16px 0;
+		width: 250px;
+	}
+
+	.buttonLink-fill
+	{
+		margin: 16px auto;
+		width: 100%;
+	}
+
+	.buttonLink:hover
+	{
+		margin: 14px 0;
+		background-color: #e2544a;
+		transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+	}
+
+	.grid-container
+	{
+		margin-top: 40px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+		grid-template-rows: repeat(2, auto); /* 2 rows with 100px height each */
+		gap: 30px; /* Optional: add gap between grid items */
+	}
+
+	.grid-item
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #f0f0f0;
+		font-size: 24px;
+		border-radius: 22px;
+	}
+
+	.contactForm
+	{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contactForm label
+	{
+		font-family: Inter;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 600;
+	}
+
+	.contactForm input
+	{
+		font-family: Inter;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		margin: 16px 0 32px 0;
+		padding: 20px 16px;
+	}
+
+	.contactForm textarea
+	{
+		font-family: Inter;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		margin: 16px 0 16px 0;
+		min-height: 120px;
+		padding: 20px 16px;
+	}
 }
