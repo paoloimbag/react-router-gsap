@@ -15,7 +15,6 @@ code {
 
 body {
 	margin: 0;
-	padding: 0;
 	font-family: 'Inter', sans-serif;
 }
 
@@ -26,19 +25,34 @@ header {
 	z-index: 999;
 }
 
+hr
+{
+	width: 100%;
+	max-width: 1440px;
+	margin: 120px auto 0;
+}
+
+
 .navbar {
 	display: flex;
 	justify-content: space-between;
+	flex-direction: column;
 	align-items: center;
 	padding: 30px 0;
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
+	row-gap: 30px;
 }
 
 .logo {
 	font-size: 24px;
 	font-weight: bold;
+}
+
+.navbar.desktop
+{
+	display: none;
 }
 
 .nav-links {
@@ -64,27 +78,166 @@ header {
 }
 
 .nav-links a:hover {
-	color: #007bff;
+	color: #F96D64;
 }
 
-.active-link {
-	font-weight: bold;
-	color: red;
-  }
+.container
+{
+	margin: 0 40px;
+}
+
+.heroImage img
+{
+	width: 100%;
+}
 
 
+svg
+{
+	color: #000;
+}
+
+svg:hover
+{
+	color: #F96D64;
+}
+
+.grid-container > .grid-item
+{
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+
+.buttonLink
+{
+	padding: 24px 0;
+	background-color: #F96D64;
+	color: #FFF;
+	text-align: center;
+	font-family: Inter;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 36px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+	margin-top: 20px;
+}
+
+.recent
+{
+	margin-top: 3em;
+}
+
+
+.heroCopy h1, .headingH1
+{
+	color: #000;
+	font-family: Inter;
+	font-size: 44px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 44px;
+}
+
+.heroCopy p
+{
+	color: #000;
+	font-family: Inter;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 28px;
+	margin-top: 0;
+}
+
+
+.contactForm
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.contactForm label
+{
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+}
+
+.contactForm input
+{
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	margin: 16px 0 32px 0;
+	padding: 20px 16px;
+}
+
+.contactForm textarea
+{
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	margin: 16px 0 16px 0;
+	min-height: 120px;
+	padding: 20px 16px;
+}
+
+.contactH1
+{
+	color: #000;
+	font-family: Inter;
+	font-size: 44px;;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 44px;; /* 107.143% */
+}
 
 /* Desktop */
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
+
+	body
+	{
+		padding: 50px;
+	}
+
+	/* Nav */
+	.navbar.desktop 
+	{
+		display: flex;
+		align-items: center;
+	}
+
+	.nav-links
+	{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.nav-links ul
+	{
+		list-style: none;
+		display: flex;
+	}
+
+	.nav-links li
+	{
+		margin-right: 20px;
+	}
+
+	.nav-links li:last-child
+	{
+		margin-right: 0;
+	}
 
 	/* Layout */
-	hr
-	{
-		width: 100%;
-		max-width: 1440px;
-		margin: 120px auto 0;
-	}
 
 	footer
 	{
@@ -96,6 +249,19 @@ header {
 		justify-content: space-between;
 	}
 
+	.desktop
+	{
+		display: flex;
+		visibility: visible;
+	}
+	
+	
+	.mobile
+	{
+		display: none;
+		visibility: hidden;
+	}
+
 	/* Home Page */
 
 	.container
@@ -103,6 +269,7 @@ header {
 		max-width: 1440px;
 		width: 100%;
 		margin: 0 auto;
+		padding: 0;
 	}
 
 	.header
@@ -120,6 +287,12 @@ header {
 		top: 150px; /* Adjust this value to set the distance from the top when the div becomes sticky */
 	}
 
+	.heroImage
+	{
+		width: 100%;
+		margin: 0;
+	}
+
 	.heroCopy
 	{
 		display: flex;
@@ -133,11 +306,7 @@ header {
 	}
 	.heroCopy h1, .headingH1
 	{
-		color: #000;
-		font-family: Inter;
 		font-size: 112px;
-		font-style: normal;
-		font-weight: 600;
 		line-height: 120px; /* 107.143% */
 	}
 
@@ -160,22 +329,6 @@ header {
 		font-style: normal;
 		font-weight: 600;
 		line-height: 104px; /* 107.143% */
-	}
-
-	.buttonLink
-	{
-		padding: 24px 0;
-		background-color: #F96D64;
-		color: #FFF;
-		text-align: center;
-		font-family: Inter;
-		font-size: 20px;
-		font-style: normal;
-		font-weight: 600;
-		line-height: 36px;
-		border-radius: 8px;
-		cursor: pointer;
-		transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 	}
 
 	.buttonLink-hug
@@ -216,38 +369,4 @@ header {
 		border-radius: 22px;
 	}
 
-	.contactForm
-	{
-		display: flex;
-		flex-direction: column;
-	}
-
-	.contactForm label
-	{
-		font-family: Inter;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 600;
-	}
-
-	.contactForm input
-	{
-		font-family: Inter;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 400;
-		margin: 16px 0 32px 0;
-		padding: 20px 16px;
-	}
-
-	.contactForm textarea
-	{
-		font-family: Inter;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 400;
-		margin: 16px 0 16px 0;
-		min-height: 120px;
-		padding: 20px 16px;
-	}
 }

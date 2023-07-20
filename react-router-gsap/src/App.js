@@ -1,11 +1,11 @@
 import { Routes, Route} from "react-router-dom";
+import { Helmet } from 'react-helmet';
 import Layout from "./components/Layout";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/Contact";
 import Error404 from "./components/pages/Error404";
-
 
 export default function App() {
 	return (
@@ -23,6 +23,12 @@ export default function App() {
 			{/* Routes nest inside one another. Nested route paths build upon
 						parent route paths, and nested route elements render inside
 						parent route elements. See the note about <Outlet> below. */}
+
+
+
+			<Helmet>
+				<title>React Router - Paolo Imbag • INM 420</title>
+			</Helmet>
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />
@@ -39,10 +45,3 @@ export default function App() {
 		</div>
 	);
 }
-
-
-
-
-
-
-

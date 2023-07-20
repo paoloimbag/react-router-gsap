@@ -3,6 +3,9 @@ export default function Contact() {
   return (
 	<div className="container">
         <div className="header">
+            <div className="heroImage sticky">
+                <img src={heroImage} alt="Paolo Imbag"></img>
+            </div>
             <div className="heroCopy">
                 <h2 className="contactH1">
                     Got some cool design project ideas in mind?
@@ -17,9 +20,6 @@ export default function Contact() {
                     <textarea id="textarea"></textarea>
 					<div className='buttonLink buttonLink-fill'>Work with me!</div>
                 </form>
-            </div>
-            <div className="heroImage sticky">
-                <img src={heroImage} alt="Paolo Imbag"></img>
             </div>
         </div>
 	</div>

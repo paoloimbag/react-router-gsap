@@ -23,7 +23,7 @@ export default function Home() {
 					<div className='buttonLink buttonLink-hug'>Let’s do cool stuff!</div>
 				</div>
 			</div>
-			<div>
+			<div className="recent">
 				<h1>
 					My Recent Work
 				</h1>
