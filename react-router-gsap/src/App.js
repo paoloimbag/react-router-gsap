@@ -1,5 +1,6 @@
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route} from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import PageTransition from './components/Transition';
 import Layout from "./components/Layout";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
@@ -31,15 +32,11 @@ export default function App() {
 			</Helmet>
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route index element={<Home />} />
-					<Route path="about" element={<About />} />
-					<Route path="projects" element={<Projects />} />
-					<Route path="contact" element={<Contact />} />
-
-					{/* Using path="*"" means "match anything", so this route
-								acts like a catch-all for URLs that we don't have explicit
-								routes for. */}
-					<Route path="*" element={<Error404 />} />
+					<Route index element={<PageTransition><Home /></PageTransition>} />
+					<Route path="about" element={<PageTransition><About /></PageTransition>} />
+					<Route path="projects" element={<PageTransition><Projects /></PageTransition>} />
+					<Route path="contact" element={<PageTransition><Contact /></PageTransition>} />
+					<Route path="*" element={<PageTransition><Error404 /></PageTransition>} />
 				</Route>
 			</Routes>
 		</div>

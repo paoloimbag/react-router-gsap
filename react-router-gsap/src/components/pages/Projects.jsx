@@ -1,4 +1,4 @@
-
+// Import Projects
 import work01 from './../../assets/images/work/work-01.png';
 import work02 from './../../assets/images/work/work-02.png';
 import work03 from './../../assets/images/work/work-03.png';
@@ -9,6 +9,7 @@ import work07 from './../../assets/images/work/work-07.png';
 import work08 from './../../assets/images/work/work-08.png';
 import work09 from './../../assets/images/work/work-09.png';
 
+// Project Component
 export default function Projects() {
   return (
 	<div className="container">
@@ -29,5 +30,5 @@ export default function Projects() {
 			</div>
 		</div>
 	</div>
-  );
+	);
 }

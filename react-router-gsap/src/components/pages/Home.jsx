@@ -1,3 +1,4 @@
+// Import Images
 import heroImage from './../../assets/images/hero-image.png';
 import work01 from './../../assets/images/work/work-01.png';
 import work02 from './../../assets/images/work/work-02.png';
@@ -6,6 +7,7 @@ import work04 from './../../assets/images/work/work-04.png';
 import work05 from './../../assets/images/work/work-05.png';
 import work06 from './../../assets/images/work/work-06.png';
 
+// Home Component
 export default function Home() {
 	return (
 		<div className="container">

@@ -1,5 +1,5 @@
 import heroImage from './../../assets/images/hero-image.png';
-
+// About Component
 export default function About() {
 	return (
 		<div className="container">
@@ -44,4 +44,4 @@ export default function About() {
 			</div>
 		</div>
 	);
-  }
+}

@@ -14,7 +14,7 @@ export default function Layout() {
 			share across all the pages on your site, like navigation. */}
 		<header>
 		
-		<nav className="navbar desktop">
+		<nav className="navbar desktop"> {/* Desktop Nav */}
 			<img src={logo} alt="Paolo Imbag Logo"/>
 			<ul className="nav-links">
 				<li>
@@ -32,7 +32,7 @@ export default function Layout() {
 			</ul>
 		</nav>
 
-		<nav className="navbar mobile">
+		<nav className="navbar mobile">{/* Mobile Nav */}
 			<img src={logo} alt="Paolo Imbag Logo"/>
 			<ul className="nav-links">
 				<li>
@@ -51,14 +51,12 @@ export default function Layout() {
 		</nav>
 
 
-
 		</header>
   
 		{/* An <Outlet> renders whatever child route is currently active,
 			so you can think about this <Outlet> as a placeholder for
 			the child routes we defined above. */}
 		<Outlet />
-
 
 		<hr/>
 
@@ -105,4 +103,4 @@ export default function Layout() {
 
 	  </div>
 	);
-  }
+}

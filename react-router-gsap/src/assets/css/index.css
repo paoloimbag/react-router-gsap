@@ -13,12 +13,14 @@ code {
 } */
 
 
-body {
+body
+{
 	margin: 0;
 	font-family: 'Inter', sans-serif;
 }
 
-header {
+header
+{
 	background-color: #ffffff;
 	position: sticky;
 	top: 0;
@@ -32,8 +34,8 @@ hr
 	margin: 120px auto 0;
 }
 
-
-.navbar {
+.navbar
+{
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
@@ -45,7 +47,8 @@ hr
 	row-gap: 30px;
 }
 
-.logo {
+.logo
+{
 	font-size: 24px;
 	font-weight: bold;
 }
@@ -55,29 +58,34 @@ hr
 	display: none;
 }
 
-.nav-links {
+.nav-links
+{
 	list-style: none;
 	display: flex;
 	margin: 0;
 	padding: 0;
 }
 
-.nav-links li {
+.nav-links li
+{
 	margin-right: 50px;
 }
 
-.nav-links li:last-child {
+.nav-links li:last-child
+{
 	margin-right: 0;
 }
 
-.nav-links a {
+.nav-links a
+{
 	text-decoration: none;
 	color: #333;
 	font-size: 16px;
 	transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover
+{
 	color: #F96D64;
 }
 
@@ -86,11 +94,20 @@ hr
 	margin: 0 40px;
 }
 
+.error404
+{
+	text-align: center;
+}
+
+.error404 h1
+{
+	font-size: 5rem;
+}
+
 .heroImage img
 {
 	width: 100%;
 }
-
 
 svg
 {
@@ -107,7 +124,6 @@ svg:hover
 	width: 100%;
 	margin-bottom: 30px;
 }
-
 
 .buttonLink
 {
@@ -131,7 +147,6 @@ svg:hover
 	margin-top: 3em;
 }
 
-
 .heroCopy h1, .headingH1
 {
 	color: #000;
@@ -152,7 +167,6 @@ svg:hover
 	line-height: 28px;
 	margin-top: 0;
 }
-
 
 .contactForm
 {
@@ -201,8 +215,8 @@ svg:hover
 
 /* Desktop */
 
-@media only screen and (min-width: 768px) {
-
+@media only screen and (min-width: 768px)
+{
 	body
 	{
 		padding: 50px;
@@ -367,6 +381,11 @@ svg:hover
 		background-color: #f0f0f0;
 		font-size: 24px;
 		border-radius: 22px;
+	}
+
+	.error404 h1
+	{
+		font-size: 10rem;
 	}
 
 }
